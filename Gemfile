@@ -16,7 +16,7 @@ gem "ruby-openid", :require => "openid"
 
 # you may comment out the database driver you will not be using.
 # This will prevent a native build of the driver. Building native drivers is not always possible on all hosters
-gem "sqlite3"
+gem "pg"
 gem "mysql"
 
 gem 'bcrypt-ruby', '~> 2.1.4'
@@ -54,10 +54,10 @@ group :test do
   gem "database_cleaner", ">=0.5.0"
   gem "cucumber-rails", "~>0.3.2"
   gem "aruba", "0.2.2", :path => "vendor/gems/aruba-0.2.2"
-  
+
   # uncomment to use the webkit option. This depends on Qt to be installed
   #gem "capybara-webkit"
-  
+
   # uncomment to be able to make screenshots from scenarios
   #gem "capybara-screenshot"
   #gem "launchy"
