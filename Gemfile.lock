@@ -75,6 +75,7 @@ GEM
     multi_json (1.1.0)
     mysql (2.8.1)
     nokogiri (1.4.7)
+    pg (0.13.2)
     polyglot (0.3.3)
     rack (1.1.0)
     rack-test (0.6.1)
@@ -114,7 +115,6 @@ GEM
       rubyzip
     soap4r (1.5.8)
       httpclient (>= 2.1.1)
-    sqlite3 (1.3.5)
     term-ansicolor (1.0.7)
     test-unit (1.2.3)
       hoe (>= 1.5.1)
@@ -149,6 +149,7 @@ DEPENDENCIES
   memory_test_fix (~> 0.1.3)
   mongrel
   mysql
+  pg
   rack (= 1.1.0)
   rails (~> 2.3.12)
   rake (~> 0.8.7)
@@ -160,7 +161,6 @@ DEPENDENCIES
   sanitize (~> 1.2.1)
   selenium-webdriver
   soap4r (~> 1.5.8)
-  sqlite3
   test-unit (= 1.2.3)
   thoughtbot-factory_girl
   will_paginate (~> 2.3.15)
