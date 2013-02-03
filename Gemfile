@@ -43,7 +43,7 @@ end
 group :test do
   gem "test-unit", "1.2.3"
   gem "flexmock"
-  gem "ZenTest", ">=4.0.0"
+  #gem "ZenTest", ">=4.0.0"
   gem "hpricot"
   gem "hoe"
   gem "rspec-rails", "~>1.3.3"

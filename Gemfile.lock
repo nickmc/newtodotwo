@@ -8,7 +8,6 @@ GEM
   remote: http://gems.github.com/
   specs:
     RedCloth (4.2.8)
-    ZenTest (4.8.4)
     aasm (2.2.1)
     actionmailer (2.3.16)
       actionpack (= 2.3.16)
@@ -131,7 +130,6 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth (= 4.2.8)
-  ZenTest (>= 4.0.0)
   aasm (~> 2.2.0)
   acts_as_list (~> 0.1.4)
   aruba (= 0.2.2)!
