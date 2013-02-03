@@ -1,40 +1,15 @@
-# Tracks: a GTD(TM) web application, built with Ruby on Rails
+heroku.com is a new way of hosting rails apps that takes away lots of the pain.  I got a tracks installation up and running there, so I thought I’d pass on some info about what I did.  It’s from memory, but I’ll try and cover the main points.
+1) Register for heroku and get familiar with it.  Take a look at the site and learn about the way it integrates so nicely with git. To use Heroku it helps to be familiar with rails and git, but it’s still easier than most rails deployments.  You’ll have to install the heroku gem using “[sudo] gem install heroku”
+2) checkout Tracks from github.  I checked out the master branch a couple of days ago, and it seems to work fine for me.
+3) Customise Tracks for heroku.
+  a) This is the key bit.  Heroku runs your app on a read-only file system, so bundle-fu can’t write to the local directory like it wants.  I worked around this by commenting out the <bundle do>  and <end> lines in app/views/layouts/standard.html.erb.  Unless you do this you’ll get errors as soon as you view a page.
+  b) Copy config/site.yml.tmpl to config/site.yml, customise it as required, and check it in to git.  This is important because we need git to upload it to heroku, so it needs to be checked in.  You might have to remove the site.yml line from .gitignore to achieve this.  There’s no need to customise database.yml, heroku will do this automatically on the server.
+  c) In the tracks directory, type “heroku create”.  This will return a URL and remote git URI, as well as configuring a remote in git called heroku
+4) Upload.  Type “git push heroku master”.  Heroku will compile tracks server side, and hopefully print a success message
+5) type “heroku open” and your new site should appear.
+6) Optional - add a CNAME record to a personal domain and get heroku to recognise it. See http://docs.heroku.com/custom-domains
 
-* Project homepage: http://getontracks.org/
-* Manual: http://getontracks.org/manual/
-* Source at GitHub: http://github.com/TracksApp/tracks/
-* Assembla space (for bug reports and feature requests): http://www.assembla.com/spaces/tracks-tickets/tickets
-* Wiki (community contributed information): https://github.com/TracksApp/tracks/wiki
-* Forum (read-only): http://getontracks.org/forums/
-* Mailing list: http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss
-* Original developer: bsag (http://www.rousette.org.uk/)
-* Contributors: https://github.com/TracksApp/tracks/wiki/Contributors
-* Version: 2.2devel
-* Copyright: (cc) 2004-2012 rousette.org.uk.
-* License:  GNU GPL
+This is from memory, and now I’ve written it down it looks more complicated than I intended, but I wanted to recommend Heroku, and give some tips on how to host Tracks there.
+Hope it helps,
+Gavin.
 
-More documentation for Tracks can be found within the /doc directory.
-
-The manual includes full instructions for both new installations and upgrades
-from older installations of Tracks.
-
-The instructions might appear long and intimidatingly complex, but that is
-mostly because of the number of different platforms supported, and the
-different configurations which can be used (e.g. running Tracks on your local
-computer or on a remote server). If you choose the appropriate section for your
-situation (installation vs. upgrade), and use the easiest (recommended) method,
-you should find the instructions easy to follow. If you encounter problems, try
-searching the wiki, forum or mailing list (URLs above), and ask a question if
-you cannot find a solution to your problem.
-
-The wiki has a lot of user contributed installation HOWTOs for various webhosts, specific OS's and more.
-
-If you are thinking about contributing towards the development of Tracks,
-please read /doc/README_DEVELOPERS for general information. Also you can find
-some information on development, testing and contributing on the wiki.
-
-While fully usable for everyday use, Tracks is still a work in progress. Make
-sure that you take sensible precautions and back up all your data frequently,
-taking particular care when you are upgrading.
-
-Enjoy being productive!

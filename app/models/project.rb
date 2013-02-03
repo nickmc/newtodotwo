@@ -1,5 +1,4 @@
-class Project < ActiveRecord::Base
-  has_many :todos, :dependent => :delete_all
+
   has_many :notes, :dependent => :delete_all, :order => "created_at DESC"
   has_many :recurring_todos
 
