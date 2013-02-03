@@ -13,3 +13,7 @@ This is from memory, and now I’ve written it down it looks more complicated th
 Hope it helps,
 Gavin.
 
+
+commit -a -m "message"
+git push origin master
+git push heroku master
