@@ -40,25 +40,25 @@ group :development do
   gem "yard"
 end
 
-group :test do
-  gem "test-unit", "1.2.3"
-  gem "flexmock"
-  #gem "ZenTest", ">=4.0.0"
-  gem "hpricot"
-  gem "hoe"
-  gem "rspec-rails", "~>1.3.3"
-  gem "thoughtbot-factory_girl"
-  gem 'memory_test_fix', '~>0.1.3'
-  gem "capybara", ">=0.3.5"
-  gem "selenium-webdriver" # Note that > 2.14 has problems: https://code.google.com/p/selenium/issues/detail?id=3075
-  gem "database_cleaner", ">=0.5.0"
-  gem "cucumber-rails", "~>0.3.2"
-  gem "aruba", "0.2.2", :path => "vendor/gems/aruba-0.2.2"
-
-  # uncomment to use the webkit option. This depends on Qt to be installed
-  #gem "capybara-webkit"
-
-  # uncomment to be able to make screenshots from scenarios
-  #gem "capybara-screenshot"
-  #gem "launchy"
-end
+#group :test do
+#  gem "test-unit", "1.2.3"
+#  gem "flexmock"
+#  #gem "ZenTest", ">=4.0.0"
+#  gem "hpricot"
+#  gem "hoe"
+#  gem "rspec-rails", "~>1.3.3"
+#  gem "thoughtbot-factory_girl"
+#  gem 'memory_test_fix', '~>0.1.3'
+#  gem "capybara", ">=0.3.5"
+#  gem "selenium-webdriver" # Note that > 2.14 has problems: https://code.google.com/p/selenium/issues/detail?id=3075
+#  gem "database_cleaner", ">=0.5.0"
+#  gem "cucumber-rails"
+#  gem "aruba", "0.2.2", :path => "vendor/gems/aruba-0.2.2"
+#
+#  # uncomment to use the webkit option. This depends on Qt to be installed
+#  #gem "capybara-webkit"
+#
+#  # uncomment to be able to make screenshots from scenarios
+#  #gem "capybara-screenshot"
+#  #gem "launchy"
+#end
